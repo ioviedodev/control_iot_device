@@ -10,3 +10,6 @@ The actions could be: Turn on/off a cooling system and/or valve water.
 
 
 [Shemas availables in:] (https://www.figma.com/file/v052r38GpQTONbrULF8FYP/CHARLA-AN%C3%81LISIS-Y-RESOLUCI%C3%93N-DE-PROBLEMAS-CON-MQTT?type=whiteboard&node-id=0%3A1&t=TAvaVEIJWmEByLWU-1)
+
+
+[About the author:] (https://docs.google.com/presentation/d/1eQJoli29T4LMaO1BUyO9tlBybk57rlD9V3FFFrCrc4c/edit?usp=sharing)

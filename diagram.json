@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -319.61, "left": 14.02, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -248.43,
+      "left": 126.38,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "VALVULA_AG",
+      "top": -338.47,
+      "left": 157.71,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -379.16, "left": -173.64, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "SIST_ENFRIAMIENTO",
+      "top": -342.96,
+      "left": 232.9,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -256.79,
+      "left": 196.74,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "VALVULA_AG:C", "r1:1", "green", [ "v0" ] ],
+    [ "r2:1", "SIST_ENFRIAMIENTO:C", "green", [ "h0" ] ],
+    [ "dht1:SDA", "esp:D25", "green", [ "v0" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v166.84", "h312.94", "v-5.37" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "r1:2", "esp:GND.1", "green", [ "h-0.31", "v43.02" ] ],
+    [ "VALVULA_AG:A", "esp:D19", "green", [ "v0" ] ],
+    [ "r2:2", "esp:GND.1", "green", [ "h-42.26", "v48.5" ] ],
+    [ "SIST_ENFRIAMIENTO:A", "esp:D21", "green", [ "v14.38", "h-122.77", "v27.87" ] ]
+  ],
+  "dependencies": {}
+}
